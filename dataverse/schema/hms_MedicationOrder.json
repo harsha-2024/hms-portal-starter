@@ -1,0 +1,60 @@
+{
+  "logicalName": "hms_medicationorder",
+  "displayName": "Medication Order",
+  "description": "Medication orders",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_encounter",
+      "displayName": "Encounter",
+      "target": "hms_encounter"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_medicationname",
+      "displayName": "Medication Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_dose",
+      "displayName": "Dose",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_route",
+      "displayName": "Route",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_frequency",
+      "displayName": "Frequency",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_duration",
+      "displayName": "Duration",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_GenericStatus"
+    }
+  ]
+}

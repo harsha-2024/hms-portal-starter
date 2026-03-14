@@ -1,0 +1,53 @@
+{
+  "logicalName": "hms_insurancepolicy",
+  "displayName": "Insurance Policy",
+  "description": "Patient insurance",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_payername",
+      "displayName": "Payer Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_memberid",
+      "displayName": "Member ID",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_groupnumber",
+      "displayName": "Group Number",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_effectivedate",
+      "displayName": "Effective Date"
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_enddate",
+      "displayName": "End Date"
+    },
+    {
+      "type": "Boolean",
+      "logicalName": "hms_isprimary",
+      "displayName": "Is Primary"
+    }
+  ]
+}

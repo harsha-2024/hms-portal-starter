@@ -1,0 +1,3 @@
+appointmentnumber,patientnumber,providernumber,starttime,endtime,status,type
+AP-0001,PT-0001,PR-1001,2026-03-20T09:00:00,2026-03-20T09:30:00,Confirmed,New
+AP-0002,PT-0002,PR-1002,2026-03-21T10:00:00,2026-03-21T10:20:00,Requested,Follow-up

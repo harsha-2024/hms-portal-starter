@@ -1,0 +1,97 @@
+{
+  "logicalName": "hms_patient",
+  "displayName": "Patient",
+  "description": "Patient master",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_patientnumber",
+      "displayName": "Patient Number",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_firstname",
+      "displayName": "First Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_lastname",
+      "displayName": "Last Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_dob",
+      "displayName": "Date of Birth"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_gender",
+      "displayName": "Gender",
+      "choiceSet": "hms_Gender"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_email",
+      "displayName": "Email",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_phone",
+      "displayName": "Phone",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_address1",
+      "displayName": "Address",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_primaryprovider",
+      "displayName": "Primary Provider",
+      "target": "hms_provider"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_portalcontact",
+      "displayName": "Portal Contact",
+      "target": "contact"
+    },
+    {
+      "type": "Boolean",
+      "logicalName": "hms_confidential",
+      "displayName": "Confidential"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_consentversion",
+      "displayName": "Consent Version",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "DateTime",
+      "logicalName": "hms_consentdate",
+      "displayName": "Consent Date"
+    }
+  ]
+}

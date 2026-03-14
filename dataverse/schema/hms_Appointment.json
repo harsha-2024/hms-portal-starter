@@ -1,0 +1,70 @@
+{
+  "logicalName": "hms_appointment",
+  "displayName": "Appointment",
+  "description": "Patient appointment",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_appointmentnumber",
+      "displayName": "Appointment Number",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_provider",
+      "displayName": "Provider",
+      "target": "hms_provider"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_facility",
+      "displayName": "Facility",
+      "target": "hms_facility"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_room",
+      "displayName": "Room",
+      "target": "hms_room"
+    },
+    {
+      "type": "DateTime",
+      "logicalName": "hms_starttime",
+      "displayName": "Start Time"
+    },
+    {
+      "type": "DateTime",
+      "logicalName": "hms_endtime",
+      "displayName": "End Time"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_AppointmentStatus"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_appointmenttype",
+      "displayName": "Appointment Type",
+      "choiceSet": "hms_AppointmentType"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_reason",
+      "displayName": "Reason",
+      "required": false,
+      "maxLength": 500,
+      "searchable": true
+    }
+  ]
+}

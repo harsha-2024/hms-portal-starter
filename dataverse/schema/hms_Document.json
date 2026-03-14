@@ -1,0 +1,33 @@
+{
+  "logicalName": "hms_document",
+  "displayName": "Document",
+  "description": "Patient documents",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_doctype",
+      "displayName": "Document Type",
+      "choiceSet": "hms_DocumentType"
+    },
+    {
+      "type": "File",
+      "logicalName": "hms_file",
+      "displayName": "File"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_description",
+      "displayName": "Description",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    }
+  ]
+}

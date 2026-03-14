@@ -1,0 +1,60 @@
+{
+  "logicalName": "hms_labresult",
+  "displayName": "Lab Result",
+  "description": "Lab result for an order",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_laborder",
+      "displayName": "Lab Order",
+      "target": "hms_laborder"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_analyte",
+      "displayName": "Analyte",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Decimal",
+      "logicalName": "hms_value",
+      "displayName": "Value",
+      "precision": 2
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_unit",
+      "displayName": "Unit",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_referencerange",
+      "displayName": "Reference Range",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_flag",
+      "displayName": "Flag",
+      "choiceSet": "hms_ResultFlag"
+    },
+    {
+      "type": "Boolean",
+      "logicalName": "hms_releasedtoportal",
+      "displayName": "Released To Portal"
+    },
+    {
+      "type": "File",
+      "logicalName": "hms_resultfile",
+      "displayName": "Result File"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "logicalName": "hms_service",
+  "displayName": "Service",
+  "description": "Billable service",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_code",
+      "displayName": "Code",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_description",
+      "displayName": "Description",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Currency",
+      "logicalName": "hms_price",
+      "displayName": "Price"
+    }
+  ]
+}

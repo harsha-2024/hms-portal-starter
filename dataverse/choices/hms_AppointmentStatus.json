@@ -1,0 +1,8 @@
+{
+  "Requested": 1,
+  "Confirmed": 2,
+  "Checked-in": 3,
+  "No-Show": 4,
+  "Completed": 5,
+  "Canceled": 6
+}

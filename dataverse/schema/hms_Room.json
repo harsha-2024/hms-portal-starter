@@ -1,0 +1,22 @@
+{
+  "logicalName": "hms_room",
+  "displayName": "Room",
+  "description": "Room within a facility",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_facility",
+      "displayName": "Facility",
+      "target": "hms_facility"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_name",
+      "displayName": "Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    }
+  ]
+}

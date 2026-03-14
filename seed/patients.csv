@@ -1,0 +1,3 @@
+patientnumber,firstname,lastname,dob,gender,email,phone
+PT-0001,Adam,Ng,1985-02-14,Male,adam.ng@example.com,+65 8123 4567
+PT-0002,Sara,Lim,1990-09-30,Female,sara.lim@example.com,+65 8765 4321

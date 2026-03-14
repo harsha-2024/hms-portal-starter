@@ -1,0 +1,4 @@
+{
+  "Patient\u2192Provider": 1,
+  "Provider\u2192Patient": 2
+}

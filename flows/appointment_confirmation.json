@@ -1,0 +1,17 @@
+{
+  "name": "HMS_Appointment_Confirmation",
+  "trigger": "When hms_appointment status changes to Confirmed",
+  "actions": [
+    {
+      "type": "Email",
+      "to": "patient.contact.email",
+      "subject": "Appointment Confirmed",
+      "body": "Details and ICS attachment"
+    },
+    {
+      "type": "OptionalSMS",
+      "connector": "Twilio",
+      "message": "Reminder text"
+    }
+  ]
+}

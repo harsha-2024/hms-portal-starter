@@ -1,0 +1,15 @@
+{
+  "name": "HMS_Lab_Result_Release",
+  "trigger": "When hms_labresult ReleasedToPortal = true",
+  "actions": [
+    {
+      "type": "Dataverse",
+      "create": "hms_message"
+    },
+    {
+      "type": "Email",
+      "to": "patient.contact.email",
+      "subject": "New Lab Result"
+    }
+  ]
+}

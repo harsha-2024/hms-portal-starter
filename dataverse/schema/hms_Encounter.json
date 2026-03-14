@@ -1,0 +1,71 @@
+{
+  "logicalName": "hms_encounter",
+  "displayName": "Encounter",
+  "description": "Clinical encounter",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_encounternumber",
+      "displayName": "Encounter Number",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_appointment",
+      "displayName": "Appointment",
+      "target": "hms_appointment"
+    },
+    {
+      "type": "DateTime",
+      "logicalName": "hms_encounterdatetime",
+      "displayName": "Encounter DateTime"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_encountertype",
+      "displayName": "Encounter Type",
+      "choiceSet": "hms_EncounterType"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_chiefcomplaint",
+      "displayName": "Chief Complaint",
+      "required": false,
+      "maxLength": 2000,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_hpi",
+      "displayName": "HPI",
+      "required": false,
+      "maxLength": 4000,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_assessment",
+      "displayName": "Assessment",
+      "required": false,
+      "maxLength": 4000,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_plan",
+      "displayName": "Plan",
+      "required": false,
+      "maxLength": 4000,
+      "searchable": true
+    }
+  ]
+}

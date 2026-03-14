@@ -1,0 +1,51 @@
+{
+  "logicalName": "hms_message",
+  "displayName": "Message",
+  "description": "Secure message",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_subject",
+      "displayName": "Subject",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_body",
+      "displayName": "Body",
+      "maxLength": 8000
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_provider",
+      "displayName": "Provider",
+      "target": "hms_provider"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_direction",
+      "displayName": "Direction",
+      "choiceSet": "hms_MessageDirection"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_msgstatus",
+      "displayName": "Status",
+      "choiceSet": "hms_MessageStatus"
+    },
+    {
+      "type": "File",
+      "logicalName": "hms_attachment",
+      "displayName": "Attachment"
+    }
+  ]
+}

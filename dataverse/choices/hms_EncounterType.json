@@ -1,0 +1,6 @@
+{
+  "Outpatient": 1,
+  "Inpatient": 2,
+  "Telehealth": 3,
+  "Emergency": 4
+}

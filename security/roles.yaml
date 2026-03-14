@@ -1,0 +1,65 @@
+
+roles:
+  - name: HMS Admin
+    description: Full access to HMS tables
+    privileges:
+      - table: hms_patient
+        access: CRUDE
+      - table: hms_encounter
+        access: CRUDE
+      - table: hms_appointment
+        access: CRUDE
+      - table: hms_invoice
+        access: CRUDE
+      - table: hms_invoiceline
+        access: CRUDE
+      - table: hms_claim
+        access: CRUDE
+      - table: hms_message
+        access: CRUDE
+      - table: hms_document
+        access: CRUDE
+  - name: HMS Provider
+    description: Clinical access for providers
+    privileges:
+      - table: hms_patient
+        access: R (user/team scope)
+      - table: hms_encounter
+        access: CRUDE (user/team scope)
+      - table: hms_diagnosis
+        access: CRUDE (user/team scope)
+      - table: hms_medicationorder
+        access: CRUDE (user/team scope)
+      - table: hms_laborder
+        access: CRUDE (user/team scope)
+      - table: hms_labresult
+        access: R (user/team scope)
+      - table: hms_appointment
+        access: RUD (user/team scope)
+  - name: HMS Front Desk
+    description: Scheduling and intake; no clinical write
+    privileges:
+      - table: hms_patient
+        access: CRUD
+      - table: hms_appointment
+        access: CRUD
+      - table: hms_invoice
+        access: CRU
+  - name: HMS Billing
+    description: Billing & claims
+    privileges:
+      - table: hms_invoice
+        access: CRUDE
+      - table: hms_invoiceline
+        access: CRUDE
+      - table: hms_claim
+        access: CRUDE
+      - table: hms_patient
+        access: R (org scope)
+
+field_security_profiles:
+  - name: PHI Restricted
+    fields:
+      - hms_patient.hms_confidential
+      - hms_encounter.hms_assessment
+      - hms_encounter.hms_plan

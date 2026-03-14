@@ -1,0 +1,35 @@
+{
+  "logicalName": "hms_diagnosis",
+  "displayName": "Diagnosis",
+  "description": "Encounter diagnosis",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_encounter",
+      "displayName": "Encounter",
+      "target": "hms_encounter"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_code",
+      "displayName": "Code",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_description",
+      "displayName": "Description",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Boolean",
+      "logicalName": "hms_primary",
+      "displayName": "Primary"
+    }
+  ]
+}

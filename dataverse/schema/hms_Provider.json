@@ -1,0 +1,52 @@
+{
+  "logicalName": "hms_provider",
+  "displayName": "Provider",
+  "description": "Clinical provider",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_providernumber",
+      "displayName": "Provider Number",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_fullname",
+      "displayName": "Full Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_specialty",
+      "displayName": "Specialty",
+      "choiceSet": "hms_Specialty"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_email",
+      "displayName": "Email",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_phone",
+      "displayName": "Phone",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_facility",
+      "displayName": "Facility",
+      "target": "hms_facility"
+    }
+  ]
+}

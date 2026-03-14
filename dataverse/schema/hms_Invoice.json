@@ -1,0 +1,30 @@
+{
+  "logicalName": "hms_invoice",
+  "displayName": "Invoice",
+  "description": "Patient invoice",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_InvoiceStatus"
+    },
+    {
+      "type": "Currency",
+      "logicalName": "hms_total",
+      "displayName": "Total"
+    },
+    {
+      "type": "Currency",
+      "logicalName": "hms_balance",
+      "displayName": "Balance"
+    }
+  ]
+}

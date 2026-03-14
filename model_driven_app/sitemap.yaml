@@ -1,0 +1,28 @@
+
+app:
+  name: HMS Model-Driven App
+  areas:
+    - name: Clinical
+      subareas:
+        - Patients: hms_patient
+        - Encounters: hms_encounter
+        - Diagnoses: hms_diagnosis
+        - Medication Orders: hms_medicationorder
+        - Lab Orders: hms_laborder
+        - Lab Results: hms_labresult
+        - Messages: hms_message
+    - name: Scheduling
+      subareas:
+        - Appointments: hms_appointment
+        - Providers: hms_provider
+        - Facilities: hms_facility
+        - Rooms: hms_room
+    - name: Billing
+      subareas:
+        - Invoices: hms_invoice
+        - Invoice Lines: hms_invoiceline
+        - Services: hms_service
+    - name: Configuration
+      subareas:
+        - Insurance Policies: hms_insurancepolicy
+        - Documents: hms_document

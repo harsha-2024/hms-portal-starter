@@ -1,0 +1,37 @@
+{
+  "logicalName": "hms_invoiceline",
+  "displayName": "Invoice Line",
+  "description": "Invoice line item",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_invoice",
+      "displayName": "Invoice",
+      "target": "hms_invoice"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_service",
+      "displayName": "Service",
+      "target": "hms_service"
+    },
+    {
+      "type": "Decimal",
+      "logicalName": "hms_quantity",
+      "displayName": "Quantity",
+      "precision": 2
+    },
+    {
+      "type": "Currency",
+      "logicalName": "hms_unitprice",
+      "displayName": "Unit Price"
+    },
+    {
+      "type": "Calculated",
+      "logicalName": "hms_linetotal",
+      "displayName": "Line Total",
+      "expression": "hms_quantity * hms_unitprice"
+    }
+  ]
+}

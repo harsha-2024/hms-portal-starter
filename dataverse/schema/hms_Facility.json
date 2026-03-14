@@ -1,0 +1,24 @@
+{
+  "logicalName": "hms_facility",
+  "displayName": "Facility",
+  "description": "Clinic/hospital site",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_name",
+      "displayName": "Name",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_address",
+      "displayName": "Address",
+      "required": false,
+      "maxLength": 255,
+      "searchable": true
+    }
+  ]
+}
