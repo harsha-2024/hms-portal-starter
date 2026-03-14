@@ -1,0 +1,91 @@
+{
+  "name": "HMS_Outpatient_Visit_BPF",
+  "description": "Guides users through an outpatient visit from intake to follow-up.",
+  "primaryEntity": "hms_encounter",
+  "category": "BusinessProcessFlow",
+  "created": "2026-03-14T04:56:35.371639Z",
+  "stages": [
+    {
+      "name": "Intake",
+      "order": 1,
+      "entity": "hms_appointment",
+      "requiredFields": [
+        {
+          "entity": "hms_patient",
+          "field": "hms_firstname"
+        },
+        {
+          "entity": "hms_patient",
+          "field": "hms_lastname"
+        },
+        {
+          "entity": "hms_appointment",
+          "field": "hms_starttime"
+        }
+      ],
+      "exitCriteria": [
+        "Appointment status set to 'Checked-in'"
+      ]
+    },
+    {
+      "name": "Triage",
+      "order": 2,
+      "entity": "hms_encounter",
+      "requiredFields": [
+        {
+          "entity": "hms_encounter",
+          "field": "hms_encounterdatetime"
+        },
+        {
+          "entity": "hms_encounter",
+          "field": "hms_chiefcomplaint"
+        }
+      ],
+      "exitCriteria": [
+        "Vitals recorded",
+        "Encounter created"
+      ]
+    },
+    {
+      "name": "Consultation",
+      "order": 3,
+      "entity": "hms_encounter",
+      "requiredFields": [
+        {
+          "entity": "hms_encounter",
+          "field": "hms_assessment"
+        }
+      ],
+      "exitCriteria": [
+        "Assessment & Plan documented"
+      ]
+    },
+    {
+      "name": "Orders",
+      "order": 4,
+      "entity": "hms_encounter",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Orders placed (labs/meds)"
+      ]
+    },
+    {
+      "name": "Discharge",
+      "order": 5,
+      "entity": "hms_encounter",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Follow-up created or marked not required"
+      ]
+    },
+    {
+      "name": "Follow-up",
+      "order": 6,
+      "entity": "hms_appointment",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Follow-up appointment status not 'Requested'"
+      ]
+    }
+  ]
+}

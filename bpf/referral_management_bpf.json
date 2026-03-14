@@ -1,0 +1,45 @@
+{
+  "name": "HMS_Referral_Management_BPF",
+  "description": "Manages inbound referrals through consult and feedback.",
+  "primaryEntity": "hms_referral",
+  "category": "BusinessProcessFlow",
+  "created": "2026-03-14T04:56:35.371857Z",
+  "stages": [
+    {
+      "name": "Referral Received",
+      "order": 1,
+      "entity": "hms_referral",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Referral triaged"
+      ]
+    },
+    {
+      "name": "Scheduling",
+      "order": 2,
+      "entity": "hms_appointment",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Appointment confirmed"
+      ]
+    },
+    {
+      "name": "Consult Completed",
+      "order": 3,
+      "entity": "hms_encounter",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Visit summary available"
+      ]
+    },
+    {
+      "name": "Feedback to Referrer",
+      "order": 4,
+      "entity": "hms_referral",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Feedback sent"
+      ]
+    }
+  ]
+}

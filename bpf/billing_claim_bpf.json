@@ -1,0 +1,55 @@
+{
+  "name": "HMS_Billing_Claim_BPF",
+  "description": "From code capture to claim submission and remittance.",
+  "primaryEntity": "hms_invoice",
+  "category": "BusinessProcessFlow",
+  "created": "2026-03-14T04:56:35.371781Z",
+  "stages": [
+    {
+      "name": "Code & Charge Capture",
+      "order": 1,
+      "entity": "hms_encounter",
+      "requiredFields": [
+        {
+          "entity": "hms_encounter",
+          "field": "hms_encountertype"
+        }
+      ],
+      "exitCriteria": [
+        "All services added"
+      ]
+    },
+    {
+      "name": "Invoice Creation",
+      "order": 2,
+      "entity": "hms_invoice",
+      "requiredFields": [
+        {
+          "entity": "hms_invoice",
+          "field": "hms_total"
+        }
+      ],
+      "exitCriteria": [
+        "Invoice balance >= 0"
+      ]
+    },
+    {
+      "name": "Claim Submission",
+      "order": 3,
+      "entity": "hms_claim",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Claim status not 'Draft'"
+      ]
+    },
+    {
+      "name": "Remittance",
+      "order": 4,
+      "entity": "hms_invoice",
+      "requiredFields": [],
+      "exitCriteria": [
+        "Invoice status 'Paid' or 'Partially Paid'"
+      ]
+    }
+  ]
+}
