@@ -1,0 +1,61 @@
+{
+  "logicalName": "hms_careplantask",
+  "displayName": "Care Plan Task",
+  "description": "Actionable task under a Care Plan",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_careplan",
+      "displayName": "Care Plan",
+      "target": "hms_careplan"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_title",
+      "displayName": "Title",
+      "required": true,
+      "maxLength": 200,
+      "searchable": true
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_description",
+      "displayName": "Description",
+      "maxLength": 8000
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_ownerprovider",
+      "displayName": "Assigned Provider",
+      "target": "hms_provider"
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_due",
+      "displayName": "Due Date"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_TaskStatus"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_outcome",
+      "displayName": "Outcome",
+      "required": false,
+      "maxLength": 500,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_frequency",
+      "displayName": "Frequency/Recurrence",
+      "required": false,
+      "maxLength": 100,
+      "searchable": true
+    }
+  ]
+}

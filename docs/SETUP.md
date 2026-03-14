@@ -1,31 +1,13 @@
 
-# Setup Guide
+# Setup Guide (Extended)
 
-This guide walks you through turning this starter into a working solution.
-
-## Prerequisites
-- Power Platform environment with Dataverse
-- Maker permissions
-- (Optional) SharePoint integration for documents
-- (Optional) Azure AD B2C / External Identities for Power Pages
-
-## Steps
-1. Create a **Solution** in Power Apps (e.g., `HMS Sample`).
-2. Create a **Publisher** (e.g., `HMS`, prefix `hms`).
-3. Add tables as per JSON specs in `dataverse/schema/`.
-   - In the Maker Portal, create each table and columns matching the JSON.
-   - Enable **Files** on tables that store documents.
-   - Configure **Relationships** as listed in `dataverse/schema/RELATIONSHIPS.md`.
-4. Create **Choices** matching `dataverse/choices/*.json`.
-5. Configure **Security Roles** from `security/roles.yaml` and **Field Security** from `security/field_security.yaml`.
-6. Build **Model‑Driven App** using `model_driven_app/sitemap.yaml` as reference.
-7. Provision **Power Pages** site and add pages from `power_pages/pages/`.
-   - Create web roles from `power_pages/web_roles/*.json`.
-   - Configure table permissions accordingly.
-8. Import sample data from `seed/*.csv` using Dataflows or the Data Import wizard.
-9. Create **Power Automate** flows from `flows/*.json` (import or re‑create using definitions).
-10. Test end‑to‑end scenarios.
-
-## Notes
-- Replace placeholders like `<<ENVIRONMENT_URL>>`, `<<PORTAL_URL>>`, and `<<PREFIX>>`.
-- For production, enable Auditing on PHI tables.
+Follow these steps to realize the extended HMS app in your Solution.
+1) Create Solution + Publisher (prefix `hms`).
+2) Create tables and columns per JSON under `dataverse/schema/`.
+3) Create choices from `dataverse/choices/`.
+4) Configure roles & field security under `security/`.
+5) Build Model‑Driven App sitemap using `model_driven_app/sitemap.yaml` as reference.
+6) Provision Power Pages; add pages; set web roles & table permissions.
+7) Create BPFs mirroring `bpf/*.json`, then Activate them.
+8) Recreate the flows from `flows/*.json`.
+9) Import `seed/*.csv` for demo data.

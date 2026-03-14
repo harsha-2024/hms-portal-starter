@@ -3,7 +3,7 @@
   "description": "Guides users through an outpatient visit from intake to follow-up.",
   "primaryEntity": "hms_encounter",
   "category": "BusinessProcessFlow",
-  "created": "2026-03-14T04:56:35.371639Z",
+  "created": "2026-03-14T05:02:06.864759Z",
   "stages": [
     {
       "name": "Intake",
@@ -75,7 +75,7 @@
       "entity": "hms_encounter",
       "requiredFields": [],
       "exitCriteria": [
-        "Follow-up created or marked not required"
+        "Follow-up created or not required"
       ]
     },
     {
@@ -84,7 +84,7 @@
       "entity": "hms_appointment",
       "requiredFields": [],
       "exitCriteria": [
-        "Follow-up appointment status not 'Requested'"
+        "Follow-up appointment confirmed or closed"
       ]
     }
   ]

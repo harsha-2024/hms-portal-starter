@@ -1,0 +1,16 @@
+{
+  "name": "HMS_CarePlan_Task_Due_Reminder",
+  "trigger": "Scheduled daily; due in next 48h",
+  "actions": [
+    {
+      "type": "Dataverse",
+      "list": "hms_careplantask"
+    },
+    {
+      "type": "Email",
+      "to": "assigned provider",
+      "subject": "Care Plan Task Due Soon",
+      "body": "Task details and patient link"
+    }
+  ]
+}

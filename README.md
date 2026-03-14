@@ -1,20 +1,17 @@
 
-# Healthcare Management System (HMS) — Model‑Driven Sample (Starter Pack)
+# Healthcare Management System (HMS) — Model‑Driven Sample (Extended)
 
-**Generated:** 2026-03-14T04:48:23.455858Z
+**Generated:** 2026-03-14T05:02:06.859355Z
 
-This starter pack contains templates and seed data to help you build a model‑driven healthcare portal solution on **Microsoft Power Platform** (Dataverse + Power Apps + Power Pages + Power Automate).
+This pack contains Dataverse schemas, BPF templates, portal stubs, flow blueprints, and seed data for a model‑driven healthcare portal solution.
 
-> ⚠️ Note: This ZIP is a scaffolding pack, not a managed solution. Import steps are in `docs/SETUP.md`.
+> ⚠️ This is scaffolding, not a managed solution. Follow `docs/SETUP.md` to build/import.
 
 ## Contents
-- `dataverse/` — Table schemas (JSON), choice sets, relationships (notes)
-- `security/` — Roles and table permissions (YAML templates)
-- `model_driven_app/` — Sitemap and app navigation (YAML)
-- `power_pages/` — Patient portal page templates (HTML/MD) and web roles
-- `flows/` — Power Automate flow skeletons (JSON definitions)
-- `seed/` — CSV sample data
-- `docs/` — Setup and customization guides
-
-## Publisher Prefix
-Default prefix is `hms_`. Change it across files to match your environment publisher prefix.
+- `dataverse/` — Table schemas (JSON) and choice sets
+- `security/` — Roles and field security templates
+- `model_driven_app/` — Sitemap YAML
+- `power_pages/` — Patient portal stubs
+- `flows/` — Flow skeletons
+- `bpf/` — Business Process Flow templates
+- `seed/` — CSV demo data

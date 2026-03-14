@@ -1,0 +1,7 @@
+{
+  "Draft": 1,
+  "Active": 2,
+  "On Hold": 3,
+  "Completed": 4,
+  "Cancelled": 5
+}

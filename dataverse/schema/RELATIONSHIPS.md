@@ -15,3 +15,4 @@
 - hms_Patient 1—N hms_Referral
 - hms_Message N—1 hms_Patient and N—1 hms_Provider
 - Reference: hms_Facility, hms_Room, hms_Service, hms_Document
+- New: hms_Patient 1—N hms_CarePlan; hms_Referral N—1 hms_Appointment (optional)

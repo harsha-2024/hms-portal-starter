@@ -1,0 +1,15 @@
+{
+  "name": "HMS_Referral_Intake_Triage",
+  "trigger": "When hms_referral is created",
+  "actions": [
+    {
+      "type": "Condition",
+      "if": "priority = Urgent",
+      "then": "Notify triage team"
+    },
+    {
+      "type": "Dataverse",
+      "update": "status = Triaged"
+    }
+  ]
+}

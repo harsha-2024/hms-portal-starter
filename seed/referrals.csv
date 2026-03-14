@@ -1,0 +1,3 @@
+referralnumber,patientnumber,toprovidernumber,specialty,priority,status,receiveddate,reason
+RF-0001,PT-0001,PR-1001,Cardiology,Urgent,Received,2026-03-12,Chest pain on exertion
+RF-0002,PT-0002,PR-1002,Family Medicine,Routine,Triaged,2026-03-10,Chronic cough evaluation

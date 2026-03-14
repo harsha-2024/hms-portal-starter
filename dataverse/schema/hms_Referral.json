@@ -1,0 +1,74 @@
+{
+  "logicalName": "hms_referral",
+  "displayName": "Referral",
+  "description": "Inbound or outbound referral",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_referralnumber",
+      "displayName": "Referral Number",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_toprovider",
+      "displayName": "Referred To (Provider)",
+      "target": "hms_provider"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_specialty",
+      "displayName": "Specialty",
+      "choiceSet": "hms_Specialty"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_priority",
+      "displayName": "Priority",
+      "choiceSet": "hms_Priority"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_ReferralStatus"
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_receiveddate",
+      "displayName": "Received Date"
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_reason",
+      "displayName": "Reason for Referral",
+      "maxLength": 8000
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_scheduledappointment",
+      "displayName": "Scheduled Appointment",
+      "target": "hms_appointment"
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_feedbacksummary",
+      "displayName": "Feedback Summary",
+      "maxLength": 8000
+    },
+    {
+      "type": "File",
+      "logicalName": "hms_feedbackfile",
+      "displayName": "Feedback Attachment"
+    }
+  ]
+}

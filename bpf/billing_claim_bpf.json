@@ -3,7 +3,7 @@
   "description": "From code capture to claim submission and remittance.",
   "primaryEntity": "hms_invoice",
   "category": "BusinessProcessFlow",
-  "created": "2026-03-14T04:56:35.371781Z",
+  "created": "2026-03-14T05:02:06.864779Z",
   "stages": [
     {
       "name": "Code & Charge Capture",

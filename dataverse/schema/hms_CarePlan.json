@@ -1,0 +1,64 @@
+{
+  "logicalName": "hms_careplan",
+  "displayName": "Care Plan",
+  "description": "Longitudinal care plan for a patient",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_careplannumber",
+      "displayName": "Care Plan Number",
+      "required": true,
+      "maxLength": 255,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_provider",
+      "displayName": "Owner Provider",
+      "target": "hms_provider"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_title",
+      "displayName": "Title",
+      "required": true,
+      "maxLength": 200,
+      "searchable": true
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_CarePlanStatus"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_priority",
+      "displayName": "Priority",
+      "choiceSet": "hms_Priority"
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_startdate",
+      "displayName": "Start Date"
+    },
+    {
+      "type": "DateOnly",
+      "logicalName": "hms_enddate",
+      "displayName": "End Date"
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_notes",
+      "displayName": "Notes",
+      "maxLength": 8000
+    }
+  ]
+}

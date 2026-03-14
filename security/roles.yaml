@@ -19,6 +19,12 @@ roles:
         access: CRUDE
       - table: hms_document
         access: CRUDE
+      - table: hms_careplan
+        access: CRUDE
+      - table: hms_careplantask
+        access: CRUDE
+      - table: hms_referral
+        access: CRUDE
   - name: HMS Provider
     description: Clinical access for providers
     privileges:
@@ -36,6 +42,12 @@ roles:
         access: R (user/team scope)
       - table: hms_appointment
         access: RUD (user/team scope)
+      - table: hms_careplan
+        access: CRUDE (user/team scope)
+      - table: hms_careplantask
+        access: CRUDE (user/team scope)
+      - table: hms_referral
+        access: CRUDE (user/team scope)
   - name: HMS Front Desk
     description: Scheduling and intake; no clinical write
     privileges:
@@ -44,6 +56,8 @@ roles:
       - table: hms_appointment
         access: CRUD
       - table: hms_invoice
+        access: CRU
+      - table: hms_referral
         access: CRU
   - name: HMS Billing
     description: Billing & claims
