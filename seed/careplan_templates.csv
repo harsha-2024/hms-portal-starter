@@ -1,0 +1,3 @@
+templatecode,title,specialty,defaultpriority,defaultstatus,active,description
+CP_HTN_STD,Hypertension Standard,Family Medicine,Routine,Active,True,Standard HTN management plan for adults.
+CP_DM2_STD,Type 2 Diabetes Standard,Family Medicine,Routine,Active,True,Standard DM2 education and monitoring.

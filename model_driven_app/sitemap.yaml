@@ -13,6 +13,7 @@ app:
         - Care Plans: hms_careplan
         - Care Plan Tasks: hms_careplantask
         - Referrals: hms_referral
+        - Inpatient Discharges: hms_inpatientdischarge
         - Messages: hms_message
     - name: Scheduling
       subareas:
@@ -29,3 +30,5 @@ app:
       subareas:
         - Insurance Policies: hms_insurancepolicy
         - Documents: hms_document
+        - Care Plan Templates: hms_careplantemplate
+        - Care Plan Template Tasks: hms_careplantemplatetask

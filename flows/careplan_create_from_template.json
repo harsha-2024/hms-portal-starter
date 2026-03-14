@@ -1,0 +1,22 @@
+{
+  "name": "HMS_CarePlan_Create_From_Template",
+  "trigger": "Manual or custom command with inputs: templatecode, patient",
+  "steps": [
+    {
+      "type": "Dataverse",
+      "action": "Get hms_careplantemplate by templatecode"
+    },
+    {
+      "type": "Dataverse",
+      "action": "List hms_careplantemplatetask by template"
+    },
+    {
+      "type": "Dataverse",
+      "action": "Create hms_careplan using defaults"
+    },
+    {
+      "type": "Loop",
+      "action": "Create hms_careplantask with relative due date"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "HMS_InpatientDischarge_Finalize_Create_Followup",
+  "trigger": "When hms_inpatientdischarge status changes to Finalized",
+  "steps": [
+    {
+      "type": "Condition",
+      "if": "no follow-up appointment",
+      "then": "Create follow-up hms_appointment in 7 days"
+    },
+    {
+      "type": "Dataverse",
+      "action": "Update discharge with appointment"
+    },
+    {
+      "type": "Email",
+      "to": "patient.contact.email",
+      "subject": "Discharge Summary & Follow-up",
+      "body": "Portal link and instructions"
+    }
+  ]
+}

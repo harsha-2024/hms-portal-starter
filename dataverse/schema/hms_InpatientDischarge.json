@@ -1,0 +1,99 @@
+{
+  "logicalName": "hms_inpatientdischarge",
+  "displayName": "Inpatient Discharge",
+  "description": "Discharge summary for inpatient encounters",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_dischargenumber",
+      "displayName": "Discharge Number",
+      "required": true,
+      "maxLength": 50,
+      "searchable": true
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_patient",
+      "displayName": "Patient",
+      "target": "hms_patient"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_encounter",
+      "displayName": "Encounter",
+      "target": "hms_encounter"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_provider",
+      "displayName": "Attending Provider",
+      "target": "hms_provider"
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_facility",
+      "displayName": "Facility",
+      "target": "hms_facility"
+    },
+    {
+      "type": "DateTime",
+      "logicalName": "hms_admitdatetime",
+      "displayName": "Admit Date/Time"
+    },
+    {
+      "type": "DateTime",
+      "logicalName": "hms_dischargedatetime",
+      "displayName": "Discharge Date/Time"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_disposition",
+      "displayName": "Disposition",
+      "choiceSet": "hms_DischargeDisposition"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_status",
+      "displayName": "Status",
+      "choiceSet": "hms_DischargeStatus"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_readmissionrisk",
+      "displayName": "30d Readmission Risk",
+      "choiceSet": "hms_ReadmissionRisk"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_principaldiagnosis",
+      "displayName": "Principal Diagnosis",
+      "required": false,
+      "maxLength": 200,
+      "searchable": true
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_summary",
+      "displayName": "Hospital Course & Summary",
+      "maxLength": 8000
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_followupinstructions",
+      "displayName": "Follow-up Instructions",
+      "maxLength": 4000
+    },
+    {
+      "type": "Lookup",
+      "logicalName": "hms_followupappointment",
+      "displayName": "Follow-up Appointment",
+      "target": "hms_appointment"
+    },
+    {
+      "type": "File",
+      "logicalName": "hms_dischargepacket",
+      "displayName": "Discharge Packet (PDF)"
+    }
+  ]
+}

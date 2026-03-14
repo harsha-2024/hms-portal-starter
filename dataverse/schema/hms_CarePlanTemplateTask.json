@@ -1,0 +1,47 @@
+{
+  "logicalName": "hms_careplantemplatetask",
+  "displayName": "Care Plan Template Task",
+  "description": "Task line in a Care Plan Template",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Lookup",
+      "logicalName": "hms_template",
+      "displayName": "Care Plan Template",
+      "target": "hms_careplantemplate"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_title",
+      "displayName": "Title",
+      "required": true,
+      "maxLength": 200,
+      "searchable": true
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_description",
+      "displayName": "Description",
+      "maxLength": 2000
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_defaultstatus",
+      "displayName": "Default Status",
+      "choiceSet": "hms_TaskStatus"
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_frequency",
+      "displayName": "Recommended Frequency",
+      "required": false,
+      "maxLength": 100,
+      "searchable": true
+    },
+    {
+      "type": "Integer",
+      "logicalName": "hms_relative_due_days",
+      "displayName": "Relative Due (days)"
+    }
+  ]
+}

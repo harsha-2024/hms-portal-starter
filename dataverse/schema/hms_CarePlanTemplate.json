@@ -1,0 +1,53 @@
+{
+  "logicalName": "hms_careplantemplate",
+  "displayName": "Care Plan Template",
+  "description": "Reusable template to create Care Plans",
+  "ownership": "UserOwned",
+  "columns": [
+    {
+      "type": "Text",
+      "logicalName": "hms_templatecode",
+      "displayName": "Template Code",
+      "required": true,
+      "maxLength": 50,
+      "searchable": true
+    },
+    {
+      "type": "Text",
+      "logicalName": "hms_title",
+      "displayName": "Title",
+      "required": true,
+      "maxLength": 200,
+      "searchable": true
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_specialty",
+      "displayName": "Specialty",
+      "choiceSet": "hms_Specialty"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_defaultpriority",
+      "displayName": "Default Priority",
+      "choiceSet": "hms_Priority"
+    },
+    {
+      "type": "Choice",
+      "logicalName": "hms_defaultstatus",
+      "displayName": "Default Status",
+      "choiceSet": "hms_CarePlanStatus"
+    },
+    {
+      "type": "MultilineText",
+      "logicalName": "hms_description",
+      "displayName": "Description",
+      "maxLength": 4000
+    },
+    {
+      "type": "Boolean",
+      "logicalName": "hms_active",
+      "displayName": "Active"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+templatecode,title,description,defaultstatus,frequency,relative_due_days
+CP_HTN_STD,BP Log,Record BP twice daily,Not Started,Daily,1
+CP_HTN_STD,Lifestyle Counseling,Diet & exercise counseling,Not Started,Weekly,7
+CP_DM2_STD,Glucometer Log,Record fasting glucose daily,Not Started,Daily,1
+CP_DM2_STD,Foot Care Education,Foot care review & education,Not Started,Once,14

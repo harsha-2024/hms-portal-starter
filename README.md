@@ -1,17 +1,7 @@
 
-# Healthcare Management System (HMS) — Model‑Driven Sample (Extended)
-
-**Generated:** 2026-03-14T05:02:06.859355Z
-
-This pack contains Dataverse schemas, BPF templates, portal stubs, flow blueprints, and seed data for a model‑driven healthcare portal solution.
-
-> ⚠️ This is scaffolding, not a managed solution. Follow `docs/SETUP.md` to build/import.
-
-## Contents
-- `dataverse/` — Table schemas (JSON) and choice sets
-- `security/` — Roles and field security templates
-- `model_driven_app/` — Sitemap YAML
-- `power_pages/` — Patient portal stubs
-- `flows/` — Flow skeletons
-- `bpf/` — Business Process Flow templates
-- `seed/` — CSV demo data
+## New in this build
+- **Care Plan Templates** (`hms_CarePlanTemplate`, `hms_CarePlanTemplateTask`) to standardize care pathways.
+- **Inpatient Discharge** (`hms_InpatientDischarge`) with disposition/status/risk choices and follow-up linkage.
+- **Flows**: Create Care Plan from Template; finalize discharge → auto follow-up.
+- **Sitemap**: Added Care Plan Templates under *Configuration*; Inpatient Discharges under *Clinical*.
+- **Seed**: `careplan_templates.csv`, `careplan_template_tasks.csv`, `inpatient_discharges.csv`.
