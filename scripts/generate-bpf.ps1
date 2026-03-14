@@ -1,0 +1,1 @@
+Write-Host "(generator) Create BPFs from assets/bpf/*.json — extend as needed"

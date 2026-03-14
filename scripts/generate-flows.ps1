@@ -1,0 +1,1 @@
+Write-Host "(generator) Create flows from assets/flows/*.json — extend as needed"

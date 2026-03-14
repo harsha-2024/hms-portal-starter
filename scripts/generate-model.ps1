@@ -1,0 +1,1 @@
+Write-Host "(generator) Create minimal forms & views — extend as needed"

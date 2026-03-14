@@ -1,0 +1,1 @@
+Write-Host "(generator) Create tables/columns/choices from assets — extend as needed"
